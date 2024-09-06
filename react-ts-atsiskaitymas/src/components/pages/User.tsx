@@ -9,8 +9,8 @@ const User = () => {
     <>
     {!userLoginData ? <div>User not found, please Log In</div> : 
     <section>
-    <h2>user</h2>
-    <p>Saved Cards</p>
+    <h2>User</h2>
+    <p>No Saved Cards</p>
     </section>
     }
 
