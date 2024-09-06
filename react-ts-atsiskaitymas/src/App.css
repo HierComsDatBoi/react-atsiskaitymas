@@ -4,5 +4,4 @@ body{
 
 .root{
   min-height: calc(100vh - (80px + 37px));
-
 }
