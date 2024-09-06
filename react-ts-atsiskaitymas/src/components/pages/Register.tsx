@@ -1,7 +1,21 @@
 import { useContext, useState } from "react";
 import * as z from "zod";
+import styled from "styled-components";
+import bcrypt from 'bcryptjs';
 
 import UserContext, { UserContextTypes } from "../../contexts/UserContext";
+
+
+const StyledSection = styled.section`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
+    width: 400px;;
+    border: 1px solid black;
+    border-radius: 20px
+`;
 
 const Register = () => {
 
@@ -38,7 +52,7 @@ const Register = () => {
     name: '',
     birthDate: '',
     userEmail: '',
-    userImg: './media/mouse.png',
+    userImg: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
     password: '',
     passwordRepeat: ''
   });
@@ -67,6 +81,11 @@ const Register = () => {
     if (findUserEmail) {
       return setErrors({userEmail: "This email is already egzists"})
     } else {
+      
+      inputValues.password = bcrypt.hashSync(inputValues.password, 10);
+      
+
+    
       fetch("http://localhost:8080/users", {
         method: "POST",
         headers: {
@@ -76,16 +95,16 @@ const Register = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log('Success', data);
+          console.log('Success');
           setInputValues({
             name: '',
             birthDate: '',
             userEmail: '',
-            userImg: './media/mouse.png',
+            userImg: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
             password: '',
             passwordRepeat: ''
           });
-          setErrors({});
+          setErrors({submit: "Successfuly registered"});
         })
         .catch((error) => {
           console.log("Fail", error);
@@ -94,7 +113,7 @@ const Register = () => {
   };
 
   return (
-    <section>
+    <StyledSection>
       <h2>Register</h2>
 
       <form onSubmit={HandleSubmitEvent}>
@@ -172,8 +191,9 @@ const Register = () => {
         </div>
 
         <input type="submit" value="Register" />
+        {errors.submit && <p>{errors.submit}</p>}
       </form>
-    </section>
+    </StyledSection>
   );
 };
 

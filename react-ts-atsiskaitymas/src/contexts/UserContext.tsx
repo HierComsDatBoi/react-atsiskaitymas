@@ -1,4 +1,5 @@
 import { createContext, useReducer, useState, useEffect } from "react";
+import bcrypt from 'bcryptjs';
 
 type ChildrenType = { children: React.ReactElement };
 type UserType = {
@@ -36,7 +37,8 @@ const UserProvider = ({ children }: ChildrenType) => {
 
   const login = (userEmail: string, password: string): string => {
 
-    const findUser = users.find(user => user.userEmail === userEmail && user.password === password)
+    const findUser = users.find(user => user.userEmail === userEmail && bcrypt.compareSync(password, user.password))
+    
     if (findUser) {
       setUserLoginData(findUser);
       console.log(findUser);

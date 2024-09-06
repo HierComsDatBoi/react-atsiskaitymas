@@ -9,21 +9,39 @@ const HeaderStyled = styled.header`
       display:flex;
       justify-content: space-between;
       align-items: center;
-
       height: 80px;
-      
       padding: 0 20px;
       border-bottom: 1px solid black;
 
+      > .logo{      
+      height: 70px;
+      >img{
+      border: 1px solid black;
+        border-radius: 10px;
+        height: 100%
+        }
+      }
+
+      a{
+        text-decoration: none;
+      }
+
+      a.active{
+        border-bottom: 3px solid black
+      }
+
       >nav{
-        >a.active{
-          border-bottom: 3px solid black
+        >a{ 
+        margin: 0 10px
         }
       }
 
       > .userOptions{
         display: flex;
         align-items: center;
+        > a.active{
+         border-bottom: 3px solid black
+        }
 
         > div{
           display: flex;
@@ -52,7 +70,9 @@ const Header = () => {
   return (
 
     <HeaderStyled>
-      <div>Logo</div>
+      <div className="logo">
+        <img src="./media/mouse.png" alt="logo" />
+      </div>
       
       <nav>
         <NavLink to='/'>Home</NavLink>
@@ -68,7 +88,7 @@ const Header = () => {
               }} 
               text="Logout" 
               />
-              <span>{userLoginData.name}</span>
+              <NavLink to='/user'>{userLoginData.name}</NavLink>
             <img onClick={() => navigation('/user')} src={userLoginData.userImg} alt="userPic" />
             </div> : <div>
             <Button onClick={() => navigation('/login')} text="Login" />
