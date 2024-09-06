@@ -15,6 +15,12 @@ const HeaderStyled = styled.header`
       padding: 0 20px;
       border-bottom: 1px solid black;
 
+      >nav{
+        >a.active{
+          border-bottom: 3px solid black
+        }
+      }
+
       > .userOptions{
         display: flex;
         align-items: center;
@@ -38,8 +44,6 @@ const HeaderStyled = styled.header`
   `;
 
 
-
-
 const Header = () => {
   const navigation = useNavigate();
 
@@ -49,33 +53,29 @@ const Header = () => {
 
     <HeaderStyled>
       <div>Logo</div>
+      
       <nav>
         <NavLink to='/'>Home</NavLink>
-        <NavLink to='/add'>Add</NavLink>
+        {!userLoginData ? <span>Add</span> : <NavLink to='/add'>Add</NavLink>}
       </nav>
-      <div className="userOptions">
-        {userLoginData ?
-          <div className="userInfo">
-            <button
-              onClick={() => {
-                logout();
-                navigation('/');
-              }}
 
-            >Logout</button>
-            Register
+      <div className="userOptions">
+        {userLoginData ? 
+            <div className="userInfo">
             <Button onClick={() => {
               logout()
               navigation('/');
-            }} 
-              text="Login" 
+              }} 
+              text="Logout" 
               />
-            <img onClick={() => navigation('/user')} src="/media/mouse.png" alt="userPic" />
-          </div> : <div>
+              <span>{userLoginData.name}</span>
+            <img onClick={() => navigation('/user')} src={userLoginData.userImg} alt="userPic" />
+            </div> : <div>
             <Button onClick={() => navigation('/login')} text="Login" />
             <Button onClick={() => navigation('/register')} text="Register" />
           </div>
         }
+
       </div>
     </HeaderStyled>
   );

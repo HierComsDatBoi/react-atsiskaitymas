@@ -7,21 +7,27 @@ const Register = () => {
 
   const { users } = useContext(UserContext) as UserContextTypes;
 
+  const passwordValidation = new RegExp(
+    /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{5,}$/
+  );
+
   const schema = z.object({
     name: z
       .string()
       .min(1, "Name must be at least 1 character")
       .max(20, "Name must not exceed 20 characters"),
+
     birthDate: z.string().refine((date) => {
       const dateNow = new Date();
       const dateInput = new Date(date);
-      return dateInput <= dateNow;
-    }, "Please enter a valid birth date (in the past)."),
-    userEmail: z.string().email("Invalid email. Please enter a valid email address."),
+      const dateDiff = (dateNow.getTime() - dateInput.getTime()) / (1000 * 3600 * 24); /* milisec coversija i dienas */
+      return dateDiff >= 6570; /* tikrinimas ar bent 18 metu pagal dienas */
+    }, "User must be at least 18 years to register"),
+
+    userEmail: z.string().email("Invalid email. Please enter a valid email address"),
     password: z
       .string()
-      .min(3, "Password must be at least 3 characters")
-      .max(16, "Password must not exceed 16 characters"),
+      .regex(passwordValidation, "Invalid password: must contain at least one uppercase letter, one lowercase letter, one number"),
     passwordRepeat: z.string(),
   }).refine((data) => data.password === data.passwordRepeat, {
     path: ["passwordRepeat"],
