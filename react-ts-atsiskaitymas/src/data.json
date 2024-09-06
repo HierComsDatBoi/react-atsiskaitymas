@@ -10,19 +10,10 @@
       "passwordRepeat": "Dainius2"
     },
     {
-      "id": "b03b",
-      "name": "asd",
-      "birthDate": "1994-09-06",
-      "userEmail": "asd@asd.lu",
-      "userImg": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
-      "password": "$2a$10$t/a58v0ERPK4HZ6Z1n1G3OhRBcO/0g7E4586UNQNDOR1KBO0kvnye",
-      "passwordRepeat": "Asdf1"
-    },
-    {
       "id": "c8d7",
       "name": "Dainius",
       "birthDate": "1994-09-06",
-      "userEmail": "Dainius2@aik.sau",
+      "userEmail": "Nedraugauju@su.kontekstais",
       "userImg": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
       "password": "$2a$10$fX1cPbWZ5lH/7JC4IhsmP.dIWn49RkJDR9W5B1zUzBSmlyuqT9Qhm",
       "passwordRepeat": "Asdf1"
