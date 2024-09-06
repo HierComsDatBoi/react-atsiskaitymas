@@ -1,8 +1,19 @@
+import { useContext } from "react";
+import UserContext, {UserContextTypes} from "../../contexts/UserContext";
+
 const User = () => {
+
+  const {userLoginData} = useContext(UserContext) as UserContextTypes;
+
   return ( 
     <>
+    {!userLoginData ? <div>User not found, please Log In</div> : 
+    <section>
     <h2>user</h2>
     <p>Saved Cards</p>
+    </section>
+    }
+
     </>
    );
 }
