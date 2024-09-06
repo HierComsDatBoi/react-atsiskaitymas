@@ -1,8 +1,20 @@
 import { useContext, useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import bcrypt from 'bcryptjs';
 
 import UserContext, { UserContextTypes } from "../../contexts/UserContext";
+
+const StyledSection = styled.section`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
+    width: 400px;;
+    border: 1px solid black;
+    border-radius: 20px
+`;
 
 const Login = () => {
 
@@ -23,11 +35,13 @@ const Login = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+
     const response = login(inputValues.userEmail, inputValues.password);
     console.log(response);
 
     if (response === 'Wrong email or password') {
       setError('Wrong email or password');
+
     } else if (response === 'Suckses') {
       setError('Logged in successfully');
       setTimeout(() => {
@@ -38,7 +52,7 @@ const Login = () => {
   }
 
   return (
-    <section>
+    <StyledSection>
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
 
@@ -68,7 +82,7 @@ const Login = () => {
 
       </form>
       {error && <p>{error}</p>}
-    </section>
+    </StyledSection>
   );
 }
 

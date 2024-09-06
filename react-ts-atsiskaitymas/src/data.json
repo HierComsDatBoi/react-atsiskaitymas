@@ -1,71 +1,48 @@
 {
   "users": [
     {
-      "id": "1",
+      "id": "f8f1",
       "name": "Dainius",
-      "birthDate": "2000-01-01",
-      "userEmail": "dainius@lievas.programuotojas",
-      "userImg": "https://paveiksliukas.lt",
-      "password": "Ufonautas",
-      "passwordRepeat": "Ufonautas"
+      "birthDate": "1994-09-06",
+      "userEmail": "Dainius@aik.sau",
+      "userImg": "./media/mouse.png",
+      "password": "Dainius2",
+      "passwordRepeat": "Dainius2"
     },
     {
-      "id": "9bcf",
+      "id": "c8d7",
       "name": "Dainius",
-      "birthDate": "2024-02-19",
-      "userEmail": "dainius4@lievas.programuotojas",
-      "userImg": "",
-      "password": "asdf",
-      "passwordRepeat": "asdf"
-    },
-    {
-      "id": "0314",
-      "name": "Dainius",
-      "birthDate": "2024-02-19",
-      "userEmail": "dainius2@lievas.programuotojas",
-      "userImg": "https://paveiksliukas.lt",
-      "password": "asdf",
-      "passwordRepeat": "asdf"
-    },
-    {
-      "id": "d4ac",
-      "name": "Dainius",
-      "birthDate": "2024-02-19",
-      "userEmail": "asd34@asd.lu",
+      "birthDate": "1994-09-06",
+      "userEmail": "Nedraugauju@su.kontekstais",
       "userImg": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
-      "password": "asdf",
-      "passwordRepeat": "asdf"
-    },
-    {
-      "id": "2b2b",
-      "name": "Dainius",
-      "birthDate": "2024-02-19",
-      "userEmail": "asdf1@123.khj",
-      "userImg": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
-      "password": "Asdfg123",
-      "passwordRepeat": "Asdfg123"
-    },
-    {
-      "id": "204a",
-      "name": "Dainius",
-      "birthDate": "2006-02-19",
-      "userEmail": "dainiusas@lievas.programuotojas",
-      "userImg": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
-      "password": "Asdf123",
-      "passwordRepeat": "Asdf123"
+      "password": "$2a$10$fX1cPbWZ5lH/7JC4IhsmP.dIWn49RkJDR9W5B1zUzBSmlyuqT9Qhm",
+      "passwordRepeat": "Asdf1"
     }
   ],
   "cards": [
     {
       "id": "1",
-      "title": "tekstas",
-      "description": "textas",
-      "image": ""
-    }, {
+      "title": "Lorem1",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non illum dolorem quo enim cum reiciendis ex, tempore placeat numquam minus sed iusto soluta repudiandae exercitationem delectus. Odio mollitia qui ipsam dignissimos cupiditate. Tempore, at, aliquam dolores, dolor beatae aut odit voluptate sequi quisquam exercitationem rerum amet distinctio? Quae, possimus amet!",
+      "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+    },
+    {
       "id": "2",
-      "title": "tekstas",
-      "description": "textas",
-      "image": ""
+      "title": "Lorem2",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non illum dolorem quo enim cum reiciendis ex, tempore placeat numquam minus sed iusto soluta repudiandae exercitationem delectus. Odio mollitia qui ipsam dignissimos cupiditate. Tempore, at, aliquam dolores, dolor beatae aut odit voluptate sequi quisquam exercitationem rerum amet distinctio? Quae, possimus amet!",
+      "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+    },
+    {
+      "id": "4cc1",
+      "title": "Lorem3",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non illum dolorem quo enim cum reiciendis ex, tempore placeat numquam minus sed iusto soluta repudiandae exercitationem delectus. Odio mollitia qui ipsam dignissimos cupiditate. Tempore, at, aliquam dolores, dolor beatae aut odit voluptate sequi quisquam exercitationem rerum amet distinctio? Quae, possimus amet!",
+      "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+    },
+    {
+      "id": "2528",
+      "title": "Lorem4",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non illum dolorem quo enim cum reiciendis ex, tempore placeat numquam minus sed iusto soluta repudiandae exercitationem delectus. Odio mollitia qui ipsam dignissimos cupiditate. Tempore, at, aliquam dolores, dolor beatae aut odit voluptate sequi quisquam exercitationem rerum amet distinctio? Quae, possimus amet!",
+      "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
     }
   ]
 }

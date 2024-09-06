@@ -1,7 +1,7 @@
-body{
+body {
   margin: 0;
 }
 
-.root{
+.root {
   min-height: calc(100vh - (80px + 37px));
 }
