@@ -54,5 +54,18 @@
       "password": "Asdf123",
       "passwordRepeat": "Asdf123"
     }
+  ],
+  "cards": [
+    {
+      "id": "1",
+      "title": "tekstas",
+      "description": "textas",
+      "image": ""
+    }, {
+      "id": "2",
+      "title": "tekstas",
+      "description": "textas",
+      "image": ""
+    }
   ]
 }

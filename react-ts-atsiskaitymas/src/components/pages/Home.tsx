@@ -1,10 +1,17 @@
 const Home = () => {
-  return ( 
+
+  return (
     <>
-    <h2>Home</h2>
-    <p>All cards</p>
+      <section>
+        <h2>Home</h2>
+        <h2>All Cards</h2>
+        <div>
+
+        </div>
+
+      </section>
     </>
-   );
+  );
 }
- 
+
 export default Home;
