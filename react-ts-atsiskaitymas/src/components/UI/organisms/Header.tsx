@@ -1,5 +1,9 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import styled from "styled-components";
+
+import UserContext, { UserContextTypes } from "../../../contexts/UserContext";
+import { useContext, useState } from "react";
+import Button from "../atoms/Button";
 
 const HeaderStyled = styled.header`
       display:flex;
@@ -16,19 +20,31 @@ const HeaderStyled = styled.header`
         align-items: center;
 
         > div{
+          display: flex;
+          align-items: center;
+          gap: 20px;
           height: 60px;
-          padding: 0 20px;
-
+          
           > img{
             border-radius: 20px;
             height: 100%;
             object-fit: contain;
+            }
+            >button{
+              
           }
         } 
       }
   `;
 
+
+
+
 const Header = () => {
+  const navigation = useNavigate();
+
+  const { userLoginData, logout } = useContext(UserContext) as UserContextTypes;
+
   return (
 
     <HeaderStyled>
@@ -38,12 +54,28 @@ const Header = () => {
         <NavLink to='/add'>Add</NavLink>
       </nav>
       <div className="userOptions">
-        <NavLink to='/user'>User</NavLink> {/* conditional */}
-        <NavLink to='/login'>Login</NavLink>
-        <NavLink to='/register'>Register</NavLink>
-        <div>
-          <img src="/media/mouse.png" alt="userPic" />
-        </div>
+        {userLoginData ?
+          <div className="userInfo">
+            <button
+              onClick={() => {
+                logout();
+                navigation('/');
+              }}
+
+            >Logout</button>
+            Register
+            <Button onClick={() => {
+              logout()
+              navigation('/');
+            }} 
+              text="Login" 
+              />
+            <img onClick={() => navigation('/user')} src="/media/mouse.png" alt="userPic" />
+          </div> : <div>
+            <Button onClick={() => navigation('/login')} text="Login" />
+            <Button onClick={() => navigation('/register')} text="Register" />
+          </div>
+        }
       </div>
     </HeaderStyled>
   );

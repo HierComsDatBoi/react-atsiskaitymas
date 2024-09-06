@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Dainius",
+      "birthDate": "2000-01-01",
+      "userEmail": "dainius@lievas.programuotojas",
+      "userImg": "https://paveiksliukas.lt",
+      "password": "Ufonautas",
+      "passwordRepeat": "Ufonautas"
+    },
+    {
+      "id": "9bcf",
+      "name": "Dainius",
+      "birthDate": "2024-02-19",
+      "userEmail": "dainius4@lievas.programuotojas",
+      "userImg": "",
+      "password": "asdf",
+      "passwordRepeat": "asdf"
+    },
+    {
+      "id": "0314",
+      "name": "Dainius",
+      "birthDate": "2024-02-19",
+      "userEmail": "dainius2@lievas.programuotojas",
+      "userImg": "https://paveiksliukas.lt",
+      "password": "asdf",
+      "passwordRepeat": "asdf"
+    },
+    {
+      "id": "d4ac",
+      "name": "Dainius",
+      "birthDate": "2024-02-19",
+      "userEmail": "asd34@asd.lu",
+      "userImg": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+      "password": "asdf",
+      "passwordRepeat": "asdf"
+    }
+  ]
+}
